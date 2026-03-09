@@ -19,7 +19,7 @@ If product assets are missing, the system automatically generates them using a *
 
 The architecture of the system is shown below.
 
-![Architecture Diagram]([https://github.com/sanjivsurve/genai-social-campaign-poc/blob/main/docs/architecture.PNG])
+![Architecture Diagram](docs/architecture.PNG)
 
 The pipeline flows from **campaign input → asset discovery → GenAI generation → creative composition → compliance checks → final outputs**.
 
