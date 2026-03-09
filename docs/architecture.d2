@@ -1,0 +1,109 @@
+title: |md
+  # GenAI Social Campaign Automation Architecture (POC)
+| {near: top-center}
+
+title.style.font-size: 18
+
+# ------------------------------------
+# User / Input Layer
+# ------------------------------------
+
+CampaignJSON: {
+  label: "Campaign Brief JSON\n• Product\n• Brand Colors\n• Regions\n• Culture (sport, chant)\n• CTA\n• Campaign message"
+}
+
+CLI: {
+  label: "Campaign Runner\n(main.py)\n• Reads campaign JSON\n• Initializes logger\n• Starts campaign pipeline"
+}
+
+# ------------------------------------
+# Campaign Orchestrator
+# ------------------------------------
+
+CampaignEngine: {
+  label: "Campaign Engine\n• Region normalization\n• Brand color parsing\n• Creative loop\n• Aspect ratio generator\n• Output naming"
+}
+
+# ------------------------------------
+# Asset Layer
+# ------------------------------------
+
+AssetManager: {
+  label: "Asset Manager\n• Load product assets\n• Filter by product prefix\n• Validate images\n• Generate asset if missing"
+}
+
+LogoLoader: {
+  label: "Logo Loader\n• Load brand logo\n• Transparency support\n• Logo contrast adjustment"
+}
+
+# ------------------------------------
+# GenAI Asset Generation
+# ------------------------------------
+
+GenAI: {
+  label: "Local GenAI Product Generator\n(SDXL Stable Diffusion)\n• Prompt: product name\n• Photorealistic product generation\n• Transparent background cleanup\n• Save under assets/products"
+}
+
+# ------------------------------------
+# Creative Generation Engine
+# ------------------------------------
+
+ImageGenerator: {
+  label: "Background Generator\n• Gradient backgrounds\n• Culture-aware visuals\n• Basketball court / Soccer field"
+}
+
+OverlayEngine: {
+  label: "Creative Composer\n• Product placement\n• Logo placement\n• Text rendering\n• CTA button\n• Brand header color\n• Shoe glow effect"
+}
+
+AspectRatioEngine: {
+  label: "Aspect Ratio Engine\n• 1:1 (1080x1080)\n• 9:16 (1080x1920)\n• 16:9 (1920x1080)"
+}
+
+# ------------------------------------
+# Compliance / Validation
+# ------------------------------------
+
+Compliance: {
+  label: "Compliance Engine\n• Brand check\n• Legal check\n• Text validation\n• Content safety"
+}
+
+# ------------------------------------
+# Output
+# ------------------------------------
+
+CreativeOutput: {
+  label: "Generated Campaign Creatives\noutputs/\n• creative_usa_running_shoes_1x1.png\n• creative_usa_running_shoes_9x16.png\n• creative_argentina_running_shoes_16x9.png"
+}
+
+# ------------------------------------
+# Flow
+# ------------------------------------
+
+CampaignJSON -> CLI: "Load campaign brief"
+
+CLI -> CampaignEngine: "Run campaign pipeline"
+
+CampaignEngine -> AssetManager: "Request product assets"
+
+AssetManager -> GenAI: "Generate asset if none found"
+
+GenAI -> AssetManager: "Save generated product image"
+
+AssetManager -> CampaignEngine: "Return product assets"
+
+CampaignEngine -> LogoLoader: "Load brand logo"
+
+CampaignEngine -> AspectRatioEngine: "Generate aspect ratios"
+
+AspectRatioEngine -> ImageGenerator: "Create background scene"
+
+ImageGenerator -> OverlayEngine: "Background canvas"
+
+CampaignEngine -> OverlayEngine: "Pass product + brand + region data"
+
+OverlayEngine -> Compliance: "Validate creative"
+
+Compliance -> CreativeOutput: "Save approved creative"
+
+CreativeOutput -> CLI: "Campaign generation complete"

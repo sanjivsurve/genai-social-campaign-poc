@@ -1,0 +1,29 @@
+{
+  "product": "running_shoes",
+
+  "brand_colors": {
+    "primary": "#FFD54F",
+    "secondary": "#FFF8E1"
+  },
+
+  "regions": [
+    {
+      "name": "usa",
+      "campaign_message": "Own the court with unstoppable style",
+      "cta": "Shop Now",
+      "culture": {
+        "sport": "basketball",
+        "chant": "Let's Go!"
+      }
+    },
+    {
+      "name": "argentina",
+      "campaign_message": "Domina la cancha con estilo imparable",
+      "cta": "Compra Ahora",
+      "culture": {
+        "sport": "soccer",
+        "chant": "Vamos!"
+      }
+    }
+  ]
+}

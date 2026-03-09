@@ -1,0 +1,9 @@
+torch
+diffusers
+transformers
+accelerate
+safetensors
+pillow
+numpy
+rembg[cpu]
+opencv-python
