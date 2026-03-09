@@ -53,7 +53,7 @@ Thumbs.db
 # ----------------------------
 # Generated campaign outputs
 # ----------------------------
-outputs/
+outputs/*
 generated/
 campaign_outputs/
 
