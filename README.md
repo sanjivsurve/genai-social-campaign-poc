@@ -71,13 +71,9 @@ Final Social Media Outputs
 Outputs creatives for common social media formats:
 
 | Aspect Ratio | Platform Examples |
-
 |---------------|------------------|
-
 | **1:1** | Instagram / Facebook Posts |
-
 | **9:16** | Reels / TikTok / Stories |
-
 | **16:9** | YouTube / Landscape Ads |
 
 ---
@@ -98,10 +94,10 @@ Region-specific creative variations.
 
 Example:
 
-| Region | Culture |
-|------|------|
-| USA | Basketball court background |
-| Argentina | Soccer field background |
+| Region    | Culture                     |
+|-----------|-----------------------------|
+| USA       | Basketball court background |
+| Argentina | Soccer field background     |
 
 ---
 
@@ -129,61 +125,33 @@ stabilityai/stable-diffusion-xl-base-1.0
 ```
 
 genai-social-campaign-poc/
-
 │
-
 ├── src/
-
 │   ├── main.py
-
 │   ├── campaign_engine.py
-
 │   ├── overlay_engine.py
-
 │   ├── image_generator.py
-
 │   ├── asset_manager.py
-
 │   ├── compliance.py
-
 │   ├── localization.py
-
 │   └── genai_product_generator.py
-
 │
-
 ├── assets/
-
 │   ├── logo/
-
 │   │   └── logo.png
-
 │   │
-
 │   └── products/
-
 │       └── running_shoes1.png
-
 │
-
 ├── outputs/
-
 │   └── generated creatives
-
 │
-
 ├── docs/
-
 │   └── architecture.png
-
 │
-
 ├── campaign_brief_example.json
-
 ├── requirements.txt
-
 ├── README.md
-
 └── .gitignore
 
 ````
