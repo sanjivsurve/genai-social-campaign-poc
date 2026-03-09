@@ -35,7 +35,8 @@ If product assets are missing, the system automatically generates them using a *
 
 The architecture of the system is shown below.
 
-![Architecture Diagram](https://raw.githubusercontent.com/sanjivsurve/genai-social-campaign-poc/main/docs/architecture_v2.png)
+![Architecture Diagram]
+docs/architecture_v2.png
 
 The pipeline flows from:
 
