@@ -1,17 +1,33 @@
 ```markdown
 # GenAI Social Campaign Automation (POC)
 
-This project demonstrates a **Generative AI powered system to automatically generate social media advertising creatives** based on a campaign brief.  
+This project demonstrates a **Generative AI powered system that automatically generates social media advertising creatives** based on a campaign brief.
 
 The system automates:
 
-• Campaign creative generation  
-• Brand compliance checks  
-• Localization for different regions  
-• Cultural adaptation (sports themes, chants, etc.)  
-• Multi-aspect-ratio social media creatives  
+- Campaign creative generation
+- Brand compliance checks
+- Localization for different regions
+- Cultural adaptation (sports themes, chants, etc.)
+- Multi-aspect-ratio social media creatives
 
 If product assets are missing, the system automatically generates them using a **local Stable Diffusion XL (SDXL) model**.
+
+---
+
+# Table of Contents
+
+- [Architecture](#architecture)
+- [Key Features](#key-features)
+- [Repository Structure](#repository-structure)
+- [Campaign JSON Structure](#campaign-json-structure)
+- [Product Asset Logic](#product-asset-logic)
+- [GenAI Product Generation](#genai-product-generation)
+- [Installation](#installation)
+- [Running the Campaign Generator](#running-the-campaign-generator)
+- [Output](#output)
+- [Limitations](#limitations)
+- [Future Enhancements](#future-enhancements)
 
 ---
 
@@ -19,49 +35,80 @@ If product assets are missing, the system automatically generates them using a *
 
 The architecture of the system is shown below.
 
-![Architecture Diagram](docs/architecture.PNG)
+![Architecture Diagram](docs/architecture.png)
 
-The pipeline flows from **campaign input → asset discovery → GenAI generation → creative composition → compliance checks → final outputs**.
+The pipeline flows from:
+
+```
+
+Campaign Input
+↓
+Asset Discovery
+↓
+GenAI Product Generation (if assets missing)
+↓
+Creative Composition
+↓
+Compliance Checks
+↓
+Final Social Media Outputs
+
+```
 
 ---
 
 # Key Features
 
-### Campaign Automation
-- Generates social campaign creatives automatically from JSON input.
-- Supports multiple regions and localized messaging.
+## Campaign Automation
 
-### Multi-Aspect Ratio Creative Generation
+- Generates social campaign creatives automatically from JSON input
+- Supports multiple regions and localized messaging
+
+---
+
+## Multi-Aspect Ratio Creative Generation
+
 Outputs creatives for common social media formats:
 
-- **1:1** → Instagram / Facebook posts
-- **9:16** → Reels / TikTok / Stories
-- **16:9** → YouTube / landscape ads
+| Aspect Ratio | Platform Examples |
+|---------------|------------------|
+| **1:1** | Instagram / Facebook Posts |
+| **9:16** | Reels / TikTok / Stories |
+| **16:9** | YouTube / Landscape Ads |
 
-### Brand Compliance
+---
+
+## Brand Compliance
+
 Includes checks for:
 
 - Brand color usage
 - Logo presence
 - Prohibited words
 
-### Cultural Adaptation
-Region-specific creative variations:
+---
+
+## Cultural Adaptation
+
+Region-specific creative variations.
 
 Example:
 
 | Region | Culture |
 |------|------|
-USA | Basketball court background |
-Argentina | Soccer field background |
+| USA | Basketball court background |
+| Argentina | Soccer field background |
 
-### Automatic Product Generation (GenAI)
+---
+
+## Automatic Product Generation (GenAI)
+
 If product images are not found locally:
 
 - Uses **Stable Diffusion XL**
 - Generates photorealistic product images
 - Removes background
-- Saves to product asset folder
+- Saves to the product asset folder
 
 Model used:
 
@@ -149,16 +196,18 @@ Example:
 }
 ````
 
-### Fields
+---
+
+## Fields
 
 | Field            | Description                               |
 | ---------------- | ----------------------------------------- |
-| product          | product name used to match product images |
-| brand_colors     | colors used in creative design            |
-| regions          | regional campaign configurations          |
-| campaign_message | text displayed on creatives               |
-| cta              | call-to-action button text                |
-| culture          | influences background visuals             |
+| product          | Product name used to match product images |
+| brand_colors     | Colors used in creative design            |
+| regions          | Regional campaign configurations          |
+| campaign_message | Text displayed on creatives               |
+| cta              | Call-to-action button text                |
+| culture          | Influences background visuals             |
 
 ---
 
@@ -196,7 +245,7 @@ running_shoes_red.png
 
 If no matching product assets exist:
 
-1. The system triggers a **local Stable Diffusion generation**
+1. The system triggers **local Stable Diffusion generation**
 2. Generates a **photorealistic product image**
 3. Removes background
 4. Saves image automatically
@@ -215,8 +264,8 @@ This generated asset is then used in the campaign pipeline.
 
 ## 1. Clone the Repository
 
-```
-git clone https://github.com/yourrepo/genai-social-campaign-poc.git
+```bash
+git clone https://github.com/sanjivsurve/genai-social-campaign-poc.git
 cd genai-social-campaign-poc
 ```
 
@@ -224,7 +273,7 @@ cd genai-social-campaign-poc
 
 ## 2. Create Python Virtual Environment
 
-```
+```bash
 python -m venv venv
 ```
 
@@ -246,7 +295,7 @@ source venv/bin/activate
 
 ## 3. Install Dependencies
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
@@ -327,8 +376,7 @@ Possible improvements:
 * Vector database for brand assets
 * LLM prompt optimization
 * Creative ranking model
-* multi-product campaigns
-* async campaign generation workers
-* automatic A/B testing
-* cloud GPU inference
-
+* Multi-product campaigns
+* Async campaign generation workers
+* Automatic A/B testing
+* Cloud GPU inference
