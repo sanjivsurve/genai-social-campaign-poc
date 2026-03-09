@@ -35,7 +35,7 @@ If product assets are missing, the system automatically generates them using a *
 
 The architecture of the system is shown below.
 
-![Architecture Diagram](docs/architecture.png)
+![Architecture Diagram](docs/architecture_v2.png)
 
 The pipeline flows from:
 
