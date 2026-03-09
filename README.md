@@ -1,4 +1,4 @@
-```markdown
+
 # GenAI Social Campaign Automation (POC)
 
 This project demonstrates a **Generative AI powered system that automatically generates social media advertising creatives** based on a campaign brief.
