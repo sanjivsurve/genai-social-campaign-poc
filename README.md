@@ -19,7 +19,7 @@ If product assets are missing, the system automatically generates them using a *
 
 The architecture of the system is shown below.
 
-![Architecture Diagram]([docs/architecture.PNG](https://github.com/sanjivsurve/genai-social-campaign-poc/blob/main/docs/architecture.PNG))
+![Architecture Diagram]([https://github.com/sanjivsurve/genai-social-campaign-poc/blob/main/docs/architecture.PNG])
 
 The pipeline flows from **campaign input → asset discovery → GenAI generation → creative composition → compliance checks → final outputs**.
 
@@ -332,24 +332,3 @@ Possible improvements:
 * automatic A/B testing
 * cloud GPU inference
 
----
-
-# Author
-
-GenAI Social Campaign Automation Proof of Concept
-
-Demonstrates **AI-driven marketing creative automation using Stable Diffusion, Python, and image composition pipelines.**
-
-```
-
----
-
-If you'd like, I can also give you a **much stronger README upgrade** that includes:
-
-- **example generated images**
-- **architecture pipeline diagram**
-- **prompt engineering section**
-- **performance benchmarks**
-
-This makes the repo look **much more impressive for interviews, demos, or portfolio projects.**
-```
