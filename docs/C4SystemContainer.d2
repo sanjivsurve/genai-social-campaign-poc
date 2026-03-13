@@ -1,0 +1,46 @@
+direction: right
+
+User: {
+  shape: person
+}
+
+CLI: {
+  label: "CLI Interface\n(main.py)"
+}
+
+CampaignEngine: {
+  label: "Campaign Engine\n(run_campaign)"
+}
+
+AssetManager: {
+  label: "Asset Manager"
+}
+
+GenAI: {
+  label: "GenAI Product Generator\nStable Diffusion XL"
+}
+
+Overlay: {
+  label: "Creative Composition Engine"
+}
+
+Compliance: {
+  label: "Compliance Engine"
+}
+
+Background: {
+  label: "Background Generator"
+}
+
+Outputs: {
+  label: "Outputs Folder"
+}
+
+User -> CLI: "python main.py campaign.json"
+CLI -> CampaignEngine: "load campaign brief"
+CampaignEngine -> AssetManager: "load product assets"
+AssetManager -> GenAI: "generate asset if missing"
+CampaignEngine -> Background: "generate scene"
+CampaignEngine -> Overlay: "compose creative"
+CampaignEngine -> Compliance: "validate brand + legal"
+CampaignEngine -> Outputs: "save creatives"

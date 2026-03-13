@@ -1,0 +1,29 @@
+direction: right
+
+User: {
+  label: "Marketing User"
+  shape: person
+}
+
+CampaignSystem: {
+  label: "GenAI Social Campaign Generator"
+  shape: rectangle
+}
+
+GPU: {
+  label: "Local GPU / Compute"
+}
+
+Assets: {
+  label: "Product Assets Folder"
+}
+
+Outputs: {
+  label: "Generated Creatives"
+}
+
+User -> CampaignSystem: "Submit campaign brief JSON"
+CampaignSystem -> GPU: "Runs Stable Diffusion XL"
+CampaignSystem -> Assets: "Reads product assets"
+CampaignSystem -> Outputs: "Saves generated creatives"
+User <- Outputs: "Downloads creatives"

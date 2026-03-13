@@ -1,0 +1,42 @@
+direction: right
+
+CampaignBrief: {
+  label: "Campaign JSON"
+}
+
+CampaignEngine: {
+  label: "Campaign Engine"
+}
+
+AssetLoader: {
+  label: "Product Asset Loader"
+}
+
+GenAI: {
+  label: "GenAI Product Generator\nStable Diffusion XL"
+}
+
+SceneGen: {
+  label: "Scene / Background Generator"
+}
+
+CreativeComposer: {
+  label: "Creative Composer"
+}
+
+Compliance: {
+  label: "Compliance Checks"
+}
+
+Output: {
+  label: "Generated Creatives"
+}
+
+CampaignBrief -> CampaignEngine
+CampaignEngine -> AssetLoader
+AssetLoader -> GenAI
+CampaignEngine -> SceneGen
+SceneGen -> CreativeComposer
+AssetLoader -> CreativeComposer
+CreativeComposer -> Compliance
+Compliance -> Output

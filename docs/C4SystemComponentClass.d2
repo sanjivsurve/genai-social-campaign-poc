@@ -1,0 +1,43 @@
+direction: down
+
+main: {
+  label: "main.py\nCLI Entry"
+}
+
+campaign_engine: {
+  label: "campaign_engine.py\nrun_campaign()"
+}
+
+asset_manager: {
+  label: "asset_manager.py\nload_products()"
+}
+
+genai_generator: {
+  label: "genai_product_generator.py\ngenerate_product_image()"
+}
+
+overlay_engine: {
+  label: "overlay_engine.py\ncompose_creative()"
+}
+
+compliance: {
+  label: "compliance.py\nbrand_check()\nlegal_check()"
+}
+
+localization: {
+  label: "localization.py\ntranslate()"
+}
+
+logger: {
+  label: "logger.py\nsetup_logger()"
+}
+
+main -> logger
+main -> campaign_engine
+
+campaign_engine -> asset_manager
+campaign_engine -> overlay_engine
+campaign_engine -> compliance
+campaign_engine -> localization
+
+asset_manager -> genai_generator

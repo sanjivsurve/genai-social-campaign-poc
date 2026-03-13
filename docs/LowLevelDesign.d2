@@ -1,0 +1,51 @@
+direction: down
+
+run_campaign: {
+  label: "run_campaign()"
+}
+
+normalize_regions: {
+  label: "normalize_regions()"
+}
+
+get_brand_colors: {
+  label: "get_brand_colors()"
+}
+
+load_products: {
+  label: "load_products()"
+}
+
+generate_product_image: {
+  label: "generate_product_image()"
+}
+
+generate_background: {
+  label: "generate_background()"
+}
+
+compose_creative: {
+  label: "compose_creative()"
+}
+
+brand_check: {
+  label: "brand_check()"
+}
+
+legal_check: {
+  label: "legal_check()"
+}
+
+save_output: {
+  label: "save creative"
+}
+
+run_campaign -> normalize_regions
+run_campaign -> get_brand_colors
+run_campaign -> load_products
+load_products -> generate_product_image
+run_campaign -> generate_background
+run_campaign -> compose_creative
+compose_creative -> brand_check
+compose_creative -> legal_check
+compose_creative -> save_output
