@@ -35,7 +35,7 @@ If product assets are missing, the system automatically generates them using a *
 
 The architecture of the system is shown below.
 
-[Architecture Diagram](./architecture.png)
+![Architecture Diagram](docs/architecture_v2.png)
 
 The pipeline flows from:
 
@@ -342,6 +342,46 @@ creative_argentina_running_shoes1_1x1.png
 creative_argentina_running_shoes1_9x16.png
 creative_argentina_running_shoes1_16x9.png
 ```
+## Generated Creative Gallery
+
+<table>
+<tr>
+<td><img src="outputs/creative_argentina_running_shoes1_16x9.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_argentina_running_shoes1_1x1.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_argentina_running_shoes1_9x16.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+</tr>
+
+<tr>
+<td><img src="outputs/creative_argentina_shoes1_16x9.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_argentina_shoes1_1x1.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_argentina_shoes1_9x16.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+</tr>
+
+<tr>
+<td><img src="outputs/creative_argentina_shoes2_16x9.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_argentina_shoes2_1x1.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_argentina_shoes2_9x16.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+</tr>
+
+<tr>
+<td><img src="outputs/creative_usa_running_shoes1_16x9.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_usa_running_shoes1_1x1.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_usa_running_shoes1_9x16.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+</tr>
+
+<tr>
+<td><img src="outputs/creative_usa_shoes1_16x9.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_usa_shoes1_1x1.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_usa_shoes1_9x16.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+</tr>
+
+<tr>
+<td><img src="outputs/creative_usa_shoes2_16x9.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_usa_shoes2_1x1.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+<td><img src="outputs/creative_usa_shoes2_9x16.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+</tr>
+
+</table>
 
 ---
 
