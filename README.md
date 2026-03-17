@@ -411,12 +411,95 @@ Current limitations:
 
 # Future Enhancements
 
-Possible improvements:
+# Video Creative Generation
 
-* Vector database for brand assets
-* LLM prompt optimization
-* Creative ranking model
-* Multi-product campaigns
-* Async campaign generation workers
-* Automatic A/B testing
-* Cloud GPU inference
+* Extend the pipeline to generate **short video creatives (3–10 seconds)** from static images
+* Add motion effects such as **zoom (Ken Burns), pan, fade, and parallax**
+* Export videos optimized for **TikTok, Instagram Reels, and YouTube Shorts**
+
+---
+
+# Audio & Music Integration
+
+* Support adding **background music and sound effects** from an `assets/audio/` folder
+* Enable **audio mixing** (music + effects + voice)
+* Automatically trim and sync audio with video duration
+
+---
+
+# Text-to-Speech (TTS) for Localization
+
+* Generate **region-specific voiceovers** using open-source TTS models (e.g., Coqui TTS)
+* Add **localized chants or slogans** as audio overlays
+* Support **multilingual voice generation** for global campaigns
+
+---
+
+# Multi-Scene Video Storytelling
+
+* Generate multi-scene creatives:
+
+  * Intro (brand/logo)
+  * Product highlight
+  * CTA ending
+* Add smooth **transitions between scenes**
+
+---
+
+# Social Media Optimization
+
+* Automatically tailor creatives for:
+
+  * **9:16 (Reels/TikTok)**
+  * **1:1 (Instagram posts)**
+  * **16:9 (YouTube ads)**
+* Optimize layout, pacing, and text placement per platform
+
+---
+
+# Beat-Synced Motion (Advanced)
+
+* Analyze background music (e.g., using `librosa`)
+* Sync motion effects and transitions with **music beats**
+
+---
+
+# AI-Powered Creative Optimization
+
+* Rank creatives based on predicted engagement
+* Use ML models to estimate **CTR and conversion performance**
+* Automatically select best-performing variants
+
+---
+
+# Captions & Accessibility
+
+* Auto-generate **subtitles and captions**
+* Improve accessibility and engagement
+
+---
+
+# Scalable Video Generation
+
+* Introduce:
+
+  * async processing workers
+  * GPU-based rendering pipelines
+  * cloud storage (S3/CDN)
+* Enable large-scale parallel creative generation
+
+---
+
+# Advanced GenAI Enhancements
+
+* Integrate **video generation models** (AnimateDiff, Stable Video Diffusion)
+* Improve **prompt engineering** for higher-quality outputs
+* Add **brand-aware and style-consistent generation**
+
+---
+
+# A/B Testing & Feedback Loop
+
+* Generate multiple creative variations automatically
+* Evaluate performance metrics
+* Continuously improve generation quality using feedback
