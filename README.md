@@ -385,7 +385,8 @@ creative_argentina_running_shoes1_16x9.png
 
 ---
 
-# Generated Creative Video Gallery
+# Generated Creative Multi-Scene Video Gallery with Text-to-Speech and Music Beats-Synced Motion
+
 <table>
 
 <tr>
