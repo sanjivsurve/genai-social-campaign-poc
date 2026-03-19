@@ -342,7 +342,7 @@ creative_argentina_running_shoes1_1x1.png
 creative_argentina_running_shoes1_9x16.png
 creative_argentina_running_shoes1_16x9.png
 ```
-## Generated Creative Gallery
+# Generated Creative Image Gallery
 
 <table>
 <tr>
@@ -379,6 +379,86 @@ creative_argentina_running_shoes1_16x9.png
 <td><img src="outputs/creative_usa_shoes2_16x9.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
 <td><img src="outputs/creative_usa_shoes2_1x1.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
 <td><img src="outputs/creative_usa_shoes2_9x16.png" width="260" style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);"></td>
+</tr>
+
+</table>
+
+---
+
+# Generated Creative Video Gallery
+
+<table>
+
+<tr>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_argentina_shoes1_16x9_multi.mp4" type="video/mp4">
+</video>
+</td>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_argentina_shoes1_1x1_multi.mp4" type="video/mp4">
+</video>
+</td>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_argentina_shoes1_9x16_multi.mp4" type="video/mp4">
+</video>
+</td>
+</tr>
+
+<tr>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_argentina_shoes2_16x9_multi.mp4" type="video/mp4">
+</video>
+</td>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_argentina_shoes2_1x1_multi.mp4" type="video/mp4">
+</video>
+</td>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_argentina_shoes2_9x16_multi.mp4" type="video/mp4">
+</video>
+</td>
+</tr>
+
+<tr>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_usa_shoes1_16x9_multi.mp4" type="video/mp4">
+</video>
+</td>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_usa_shoes1_1x1_multi.mp4" type="video/mp4">
+</video>
+</td>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_usa_shoes1_9x16_multi.mp4" type="video/mp4">
+</video>
+</td>
+</tr>
+
+<tr>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_usa_shoes2_16x9_multi.mp4" type="video/mp4">
+</video>
+</td>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_usa_shoes2_1x1_multi.mp4" type="video/mp4">
+</video>
+</td>
+<td>
+<video width="260" controls style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+  <source src="outputs/creative_usa_shoes2_9x16_multi.mp4" type="video/mp4">
+</video>
+</td>
 </tr>
 
 </table>
