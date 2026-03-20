@@ -477,6 +477,98 @@ creative_argentina_running_shoes1_16x9.png
 
 ---
 
+# Generated Creative Video Gallery with Creative Image using Text-to-Speech and Music Beats-Synced Motion
+
+<table>
+
+<tr>
+<td>
+<a href="outputs/creative_argentina_shoes1_16x9.mp4">
+  <img src="outputs/creative_argentina_shoes1_16x9.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+<td>
+<a href="outputs/creative_argentina_shoes1_1x1.mp4">
+  <img src="outputs/creative_argentina_shoes1_1x1.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+<td>
+<a href="outputs/creative_argentina_shoes1_9x16.mp4">
+  <img src="outputs/creative_argentina_shoes1_9x16.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="outputs/creative_argentina_shoes2_16x9.mp4">
+  <img src="outputs/creative_argentina_shoes2_16x9.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+<td>
+<a href="outputs/creative_argentina_shoes2_1x1.mp4">
+  <img src="outputs/creative_argentina_shoes2_1x1.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+<td>
+<a href="outputs/creative_argentina_shoes2_9x16.mp4">
+  <img src="outputs/creative_argentina_shoes2_9x16.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="outputs/creative_usa_shoes1_16x9.mp4">
+  <img src="outputs/creative_usa_shoes1_16x9.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+<td>
+<a href="outputs/creative_usa_shoes1_1x1.mp4">
+  <img src="outputs/creative_usa_shoes1_1x1.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+<td>
+<a href="outputs/creative_usa_shoes1_9x16.mp4">
+  <img src="outputs/creative_usa_shoes1_9x16.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<a href="outputs/creative_usa_shoes2_16x9.mp4">
+  <img src="outputs/creative_usa_shoes2_16x9.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+<td>
+<a href="outputs/creative_usa_shoes2_1x1.mp4">
+  <img src="outputs/creative_usa_shoes2_1x1.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+<td>
+<a href="outputs/creative_usa_shoes2_9x16.mp4">
+  <img src="outputs/creative_usa_shoes2_9x16.png" width="260"
+  style="border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.15);">
+</a>
+</td>
+</tr>
+
+</table>
+
+---
+
 # Example Generated Creatives
 
 The system automatically produces:
