@@ -1,0 +1,382 @@
+title: |md
+  # GenAI Social Campaign Automation Architecture (POC)
+  ### Multi-Scene Video + Audio + TTS Enabled
+| {near: top-center}
+
+# ─────────────────────────────────────────
+# Styles
+# ─────────────────────────────────────────
+
+classes: {
+  input: {
+    style: {
+      fill: "#EEEDFE"
+      stroke: "#534AB7"
+      stroke-width: 2
+      font-color: "#26215C"
+      border-radius: 8
+      bold: true
+    }
+  }
+  orchestration: {
+    style: {
+      fill: "#9FE1CB"
+      stroke: "#0F6E56"
+      stroke-width: 2
+      font-color: "#04342C"
+      border-radius: 8
+      bold: true
+    }
+  }
+  asset: {
+    style: {
+      fill: "#B5D4F4"
+      stroke: "#185FA5"
+      stroke-width: 2
+      font-color: "#042C53"
+      border-radius: 8
+      bold: true
+    }
+  }
+  image_pipeline: {
+    style: {
+      fill: "#FAC775"
+      stroke: "#854F0B"
+      stroke-width: 2
+      font-color: "#412402"
+      border-radius: 8
+      bold: true
+    }
+  }
+  video: {
+    style: {
+      fill: "#F5C4B3"
+      stroke: "#993C1D"
+      stroke-width: 2
+      font-color: "#4A1B0C"
+      border-radius: 8
+      bold: true
+    }
+  }
+  audio: {
+    style: {
+      fill: "#F4C0D1"
+      stroke: "#993556"
+      stroke-width: 2
+      font-color: "#4B1528"
+      border-radius: 8
+      bold: true
+    }
+  }
+  compliance: {
+    style: {
+      fill: "#C0DD97"
+      stroke: "#3B6D11"
+      stroke-width: 2
+      font-color: "#173404"
+      border-radius: 8
+      bold: true
+    }
+  }
+  optional: {
+    style: {
+      fill: "#D3D1C7"
+      stroke: "#5F5E5A"
+      stroke-width: 1
+      stroke-dash: 4
+      font-color: "#2C2C2A"
+      border-radius: 8
+      bold: false
+    }
+  }
+  output: {
+    style: {
+      fill: "#5DCAA5"
+      stroke: "#0F6E56"
+      stroke-width: 2
+      font-color: "#04342C"
+      border-radius: 8
+      bold: true
+    }
+  }
+}
+
+# ─────────────────────────────────────────
+# INPUT LAYER
+# ─────────────────────────────────────────
+
+input_layer: "Input Layer" {
+  style: {
+    fill: "#EEEDFE"
+    stroke: "#534AB7"
+    stroke-width: 1
+    font-color: "#3C3489"
+    border-radius: 12
+    opacity: 0.6
+  }
+
+  CampaignJSON: "Campaign Brief JSON\n─────────────────\nProducts · Regions · Brand colors\nScenes · CTA · Culture flags\nWorkflow flags · Audio config" {
+    class: input
+  }
+
+  CLI: "Campaign Runner (main.py)\n─────────────────\nReads campaign JSON\nInitializes logger\nStarts pipeline" {
+    class: input
+  }
+}
+
+# ─────────────────────────────────────────
+# ORCHESTRATION
+# ─────────────────────────────────────────
+
+orchestration_layer: "Orchestration" {
+  style: {
+    fill: "#E1F5EE"
+    stroke: "#0F6E56"
+    stroke-width: 1
+    font-color: "#085041"
+    border-radius: 12
+    opacity: 0.6
+  }
+
+  CampaignEngine: "Campaign Engine\n─────────────────\nRegion normalization\nWorkflow routing (image vs video)\nCreative loop · Aspect ratio gen\nOutput naming · Scene config builder" {
+    class: orchestration
+  }
+}
+
+# ─────────────────────────────────────────
+# ASSET LAYER
+# ─────────────────────────────────────────
+
+asset_layer: "Asset Layer" {
+  style: {
+    fill: "#E6F1FB"
+    stroke: "#185FA5"
+    stroke-width: 1
+    font-color: "#0C447C"
+    border-radius: 12
+    opacity: 0.6
+  }
+
+  AssetManager: "Asset Manager\n─────────────────\nLoad product assets\nValidate images\nGenerate if missing" {
+    class: asset
+  }
+
+  LogoLoader: "Logo Loader\n─────────────────\nLoad logo\nTransparency handling\nContrast optimization" {
+    class: asset
+  }
+
+  GenAI: "GenAI Product Generator (SDXL)\n─────────────────\nPrompt → product image\nBackground removal\nSave assets" {
+    class: asset
+  }
+}
+
+# ─────────────────────────────────────────
+# CREATIVE IMAGE PIPELINE
+# ─────────────────────────────────────────
+
+image_layer: "Creative Image Pipeline" {
+  style: {
+    fill: "#FAEEDA"
+    stroke: "#854F0B"
+    stroke-width: 1
+    font-color: "#633806"
+    border-radius: 12
+    opacity: 0.6
+  }
+
+  AspectRatioEngine: "Aspect Ratio Engine\n─────────────────\n1:1  ·  9:16  ·  16:9" {
+    class: image_pipeline
+  }
+
+  ImageGenerator: "Background Generator\n─────────────────\nGradient backgrounds\nCulture-aware visuals" {
+    class: image_pipeline
+  }
+
+  OverlayEngine: "Creative Composer\n─────────────────\nProduct placement · Logo\nText + CTA · Glow effects" {
+    class: image_pipeline
+  }
+}
+
+# ─────────────────────────────────────────
+# VIDEO / SCENE ENGINE
+# ─────────────────────────────────────────
+
+video_layer: "Video / Scene Engine" {
+  style: {
+    fill: "#FAECE7"
+    stroke: "#993C1D"
+    stroke-width: 1
+    font-color: "#712B13"
+    border-radius: 12
+    opacity: 0.6
+  }
+
+  SceneEngine: "Scene Engine\n─────────────────\nParse scene JSON\nIntro / Product / CTA scenes\nDuration control · Glow + blur" {
+    class: video
+  }
+
+  VideoEngine: "Video Engine\n─────────────────\nFrame composition\nMotion (zoom / pan)\nStatic or animated scenes\nExport MP4" {
+    class: video
+  }
+
+  AIVideo: "AI Video Models (Optional)\n─────────────────\nAnimateDiff\nStable Video Diffusion\nScene-level generation" {
+    class: optional
+  }
+}
+
+# ─────────────────────────────────────────
+# AUDIO / TTS ENGINE
+# ─────────────────────────────────────────
+
+audio_layer: "Audio / TTS Engine" {
+  style: {
+    fill: "#FBEAF0"
+    stroke: "#993556"
+    stroke-width: 1
+    font-color: "#72243E"
+    border-radius: 12
+    opacity: 0.6
+  }
+
+  TTSEngine: "TTS Engine (gTTS)\n─────────────────\nGenerate chant audio\nLanguage-aware\nSave temp audio" {
+    class: audio
+  }
+
+  AudioEngine: "Audio Engine\n─────────────────\nBackground music · Whoosh effects\nChant overlay · Audio mixing\nFade in / out" {
+    class: audio
+  }
+}
+
+# ─────────────────────────────────────────
+# COMPLIANCE
+# ─────────────────────────────────────────
+
+compliance_layer: "Compliance" {
+  style: {
+    fill: "#EAF3DE"
+    stroke: "#3B6D11"
+    stroke-width: 1
+    font-color: "#27500A"
+    border-radius: 12
+    opacity: 0.6
+  }
+
+  Compliance: "Compliance Engine\n─────────────────\nBrand validation\nText checks\nContent safety" {
+    class: compliance
+  }
+}
+
+# ─────────────────────────────────────────
+# OUTPUT
+# ─────────────────────────────────────────
+
+output_layer: "Output Layer" {
+  style: {
+    fill: "#E1F5EE"
+    stroke: "#0F6E56"
+    stroke-width: 1
+    font-color: "#085041"
+    border-radius: 12
+    opacity: 0.6
+  }
+
+  CreativeOutput: "Outputs/\n─────────────────\nPNG creatives (all aspect ratios)\nMP4 videos (single-scene)\n*_multi.mp4 (multi-scene)\nTTS audio temp files" {
+    class: output
+  }
+}
+
+# ─────────────────────────────────────────
+# CONNECTIONS — Input Flow
+# ─────────────────────────────────────────
+
+input_layer.CampaignJSON -> orchestration_layer.CampaignEngine: "Load config" {
+  style.stroke: "#534AB7"
+}
+input_layer.CLI -> orchestration_layer.CampaignEngine: "Start pipeline" {
+  style.stroke: "#534AB7"
+}
+
+# ─────────────────────────────────────────
+# CONNECTIONS — Asset Flow
+# ─────────────────────────────────────────
+
+orchestration_layer.CampaignEngine -> asset_layer.AssetManager: "Fetch assets" {
+  style.stroke: "#0F6E56"
+}
+orchestration_layer.CampaignEngine -> asset_layer.LogoLoader: "Load logo" {
+  style.stroke: "#0F6E56"
+}
+asset_layer.AssetManager -> asset_layer.GenAI: "Generate if missing" {
+  style.stroke: "#185FA5"
+}
+asset_layer.GenAI -> asset_layer.AssetManager: "Return image" {
+  style.stroke: "#185FA5"
+}
+
+# ─────────────────────────────────────────
+# CONNECTIONS — Image Pipeline
+# ─────────────────────────────────────────
+
+orchestration_layer.CampaignEngine -> image_layer.AspectRatioEngine {
+  style.stroke: "#0F6E56"
+}
+image_layer.AspectRatioEngine -> image_layer.ImageGenerator {
+  style.stroke: "#854F0B"
+}
+image_layer.ImageGenerator -> image_layer.OverlayEngine {
+  style.stroke: "#854F0B"
+}
+orchestration_layer.CampaignEngine -> image_layer.OverlayEngine: "Compose image creatives" {
+  style.stroke: "#0F6E56"
+}
+image_layer.OverlayEngine -> compliance_layer.Compliance {
+  style.stroke: "#3B6D11"
+}
+
+# ─────────────────────────────────────────
+# CONNECTIONS — Video / Scene Pipeline
+# ─────────────────────────────────────────
+
+orchestration_layer.CampaignEngine -> video_layer.SceneEngine: "Build scenes from JSON" {
+  style.stroke: "#993C1D"
+}
+video_layer.SceneEngine -> video_layer.VideoEngine: "Generate scene clips" {
+  style.stroke: "#993C1D"
+}
+video_layer.VideoEngine -> audio_layer.AudioEngine: "Attach audio" {
+  style.stroke: "#D85A30"
+}
+video_layer.SceneEngine -> video_layer.AIVideo: "Optional AI scene gen" {
+  style: {
+    stroke: "#888780"
+    stroke-dash: 4
+  }
+}
+
+# ─────────────────────────────────────────
+# CONNECTIONS — Audio / TTS Pipeline
+# ─────────────────────────────────────────
+
+orchestration_layer.CampaignEngine -> audio_layer.TTSEngine: "Generate chant" {
+  style.stroke: "#993556"
+}
+audio_layer.TTSEngine -> audio_layer.AudioEngine {
+  style.stroke: "#993556"
+}
+audio_layer.AudioEngine -> video_layer.VideoEngine: "Mixed audio" {
+  style.stroke: "#D85A30"
+}
+
+# ─────────────────────────────────────────
+# CONNECTIONS — Output
+# ─────────────────────────────────────────
+
+compliance_layer.Compliance -> output_layer.CreativeOutput: "Save images" {
+  style.stroke: "#3B6D11"
+}
+video_layer.VideoEngine -> output_layer.CreativeOutput: "Save MP4 videos" {
+  style.stroke: "#993C1D"
+}
+output_layer.CreativeOutput -> input_layer.CLI: "Done" {
+  style.stroke: "#0F6E56"
+}
